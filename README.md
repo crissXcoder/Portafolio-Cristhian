@@ -1,52 +1,76 @@
-# Portfolio Personal - Cristhian
+# Portfolio Personal
 
-Portfolio personal desarrollado con Next.js 16, TypeScript y Tailwind CSS. Sitio web bilingüe (Español/Inglés) con modo oscuro/claro.
+Mi portafolio web personal desarrollado con las últimas tecnologías del ecosistema React. Un sitio moderno, rápido y accesible que presenta mi trabajo, habilidades y experiencia de manera profesional.
 
-## 🚀 Despliegue en Vercel
+## Sobre el Proyecto
 
-### Opción 1: Despliegue Automático desde GitHub (Recomendado)
+Este portfolio fue creado para mostrar mis proyectos y habilidades como desarrollador web. Cuenta con un diseño limpio y moderno, con soporte para múltiples idiomas y temas personalizables. La arquitectura está pensada para ser escalable y fácil de mantener.
 
-1. Ve a [vercel.com](https://vercel.com)
-2. Inicia sesión con tu cuenta de GitHub
-3. Haz clic en **"Add New Project"** o **"Import Project"**
-4. Selecciona el repositorio `Portafolio-Cristhian`
-5. Vercel detectará automáticamente que es un proyecto Next.js
-6. Haz clic en **"Deploy"** sin cambiar ninguna configuración
-7. Espera 1-2 minutos y tu sitio estará en línea
+## Tecnologías Utilizadas
 
-**Dominio:** Vercel te proporcionará un dominio automático tipo `tu-proyecto.vercel.app`
+El proyecto está construido con un stack moderno de JavaScript/TypeScript:
 
-### Opción 2: Despliegue desde CLI
+- **Next.js 16** - Framework de React con App Router para renderizado híbrido
+- **TypeScript** - Tipado estático para mayor robustez del código
+- **Tailwind CSS** - Framework de utilidades CSS para diseño rápido y consistente
+- **Framer Motion** - Librería para animaciones fluidas y declarativas
+- **Radix UI** - Componentes accesibles y sin estilos predefinidos
+- **Lucide React** - Iconos consistentes y optimizados
+- **next-themes** - Sistema de temas con soporte para modo oscuro
 
-```bash
-# Instalar Vercel CLI globalmente
-npm install -g vercel
+## Características Principales
 
-# Iniciar sesión
-vercel login
+El portfolio incluye varias funcionalidades pensadas para mejorar la experiencia de usuario:
 
-# Desplegar
-vercel
+- **Diseño Responsive**: Adaptado para funcionar perfectamente en móviles, tablets y escritorio
+- **Sistema de Temas**: Alternancia entre modo claro y oscuro con persistencia en el navegador
+- **Multiidioma**: Contenido disponible en español e inglés con cambio dinámico
+- **Animaciones Suaves**: Transiciones y efectos visuales que mejoran la interactividad
+- **Optimización de Imágenes**: Carga lazy y optimización automática con Next.js Image
+- **SEO Optimizado**: Metadatos configurados para mejor posicionamiento en buscadores
+- **Rendimiento**: Código optimizado con tree-shaking y división de código automática
 
-# Para producción
-vercel --prod
+## Estructura del Código
+
+El proyecto sigue una arquitectura modular y organizada:
+
+```
+portfolio/
+├── app/
+│   ├── globals.css
+│   ├── layout.tsx
+│   └── page.tsx
+├── components/
+│   ├── layout/
+│   │   ├── navbar.tsx
+│   │   ├── footer.tsx
+│   │   └── theme-provider.tsx
+│   ├── sections/
+│   │   ├── hero.tsx
+│   │   ├── about.tsx
+│   │   ├── skills.tsx
+│   │   ├── projects.tsx
+│   │   ├── education.tsx
+│   │   └── contact.tsx
+│   └── ui/
+│       ├── section-header.tsx
+│       └── scroll-to-top.tsx
+├── lib/
+│   ├── translations.ts
+│   ├── language-context.tsx
+│   └── utils.ts
+└── public/
 ```
 
-## 💻 Desarrollo Local
+Los componentes están separados en carpetas lógicas: `layout` para estructura general, `sections` para las diferentes secciones del portfolio, y `ui` para componentes reutilizables.
 
-### Requisitos Previos
+## Desarrollo Local
 
-- Node.js 18.0 o superior
-- npm o yarn
-
-### Instalación
+Para ejecutar el proyecto en tu máquina local:
 
 ```bash
 # Clonar el repositorio
 git clone https://github.com/crissXcoder/Portafolio-Cristhian.git
-
-# Navegar al directorio
-cd Portafolio-Cristhian
 
 # Instalar dependencias
 npm install
@@ -55,101 +79,31 @@ npm install
 npm run dev
 ```
 
-Abre [http://localhost:3000](http://localhost:3000) en tu navegador.
+El sitio estará disponible en `http://localhost:3000`
 
 ### Scripts Disponibles
 
 ```bash
-npm run dev      # Inicia el servidor de desarrollo
-npm run build    # Compila el proyecto para producción
-npm run start    # Inicia el servidor de producción
-npm run lint     # Ejecuta el linter
+npm run dev      # Modo desarrollo con hot reload
+npm run build    # Compilar para producción
+npm run start    # Servidor de producción
+npm run lint     # Verificar código con ESLint
 ```
 
-## 🛠️ Tecnologías
+## Configuración
 
-- **Framework:** Next.js 16 (App Router)
-- **Lenguaje:** TypeScript
-- **Estilos:** Tailwind CSS
-- **UI Components:** Radix UI
-- **Animaciones:** Framer Motion
-- **Iconos:** Lucide React
-- **Temas:** next-themes (modo oscuro/claro)
+El archivo `next.config.js` incluye configuraciones para:
 
-## 📁 Estructura del Proyecto
+- Optimización de imágenes desde dominios externos (GitHub, Unsplash)
+- Configuración de build y output
+- Opciones de rendimiento
 
-```
-portfolio/
-├── app/                      # App Router de Next.js
-│   ├── globals.css          # Estilos globales
-│   ├── layout.tsx           # Layout principal
-│   └── page.tsx             # Página principal
-├── components/
-│   ├── layout/              # Componentes de layout
-│   │   ├── footer.tsx
-│   │   ├── navbar.tsx
-│   │   └── theme-provider.tsx
-│   ├── sections/            # Secciones del portfolio
-│   │   ├── about.tsx
-│   │   ├── contact.tsx
-│   │   ├── education.tsx
-│   │   ├── hero.tsx
-│   │   ├── projects.tsx
-│   │   └── skills.tsx
-│   └── ui/                  # Componentes UI reutilizables
-│       ├── scroll-to-top.tsx
-│       └── section-header.tsx
-├── lib/
-│   ├── language-context.tsx # Contexto de idioma
-│   ├── translations.ts      # Traducciones ES/EN
-│   └── utils.ts             # Utilidades
-├── public/                  # Archivos estáticos
-├── next.config.js           # Configuración de Next.js
-├── tailwind.config.ts       # Configuración de Tailwind
-├── tsconfig.json            # Configuración de TypeScript
-└── vercel.json              # Configuración de Vercel
-```
+Para modificar las traducciones, edita `lib/translations.ts`. Cada sección tiene su correspondiente objeto de traducciones en español e inglés.
 
-## ✨ Características
+## Licencia
 
-- ✅ Diseño responsive (móvil, tablet, desktop)
-- ✅ Modo oscuro/claro
-- ✅ Bilingüe (Español/Inglés)
-- ✅ Animaciones suaves con Framer Motion
-- ✅ SEO optimizado
-- ✅ Rendimiento optimizado con Next.js 16
-- ✅ TypeScript para mayor seguridad de tipos
-- ✅ Componentes reutilizables
-
-## 🌐 Variables de Entorno
-
-Este proyecto no requiere variables de entorno para funcionar. Si necesitas agregar APIs o servicios externos en el futuro, crea un archivo `.env.local`:
-
-```env
-# Ejemplo
-NEXT_PUBLIC_API_URL=https://api.example.com
-```
-
-## 📝 Personalización
-
-Para personalizar el contenido del portfolio, edita los archivos en:
-
-- **Traducciones:** `lib/translations.ts`
-- **Secciones:** `components/sections/`
-- **Estilos:** `app/globals.css` y `tailwind.config.ts`
-- **Configuración:** `next.config.js`
-
-## 📄 Licencia
-
-Este proyecto es de código abierto y está disponible bajo la licencia MIT.
-
-## 👤 Autor
-
-**Cristhian**
-
-- GitHub: [@crissXcoder](https://github.com/crissXcoder)
-- Proyecto: [Portafolio-Cristhian](https://github.com/crissXcoder/Portafolio-Cristhian)
+MIT License - Este proyecto es de código abierto y libre para usar.
 
 ---
 
-⭐ Si te gusta este proyecto, ¡no olvides darle una estrella en GitHub!
+Desarrollado por [Cristhian](https://github.com/crissXcoder)
