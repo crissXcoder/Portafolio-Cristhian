@@ -152,7 +152,7 @@ export default function Hero() {
               <div className="absolute inset-6 rounded-full overflow-hidden bg-gradient-to-br from-primary/20 to-primary/5 border-4 border-card shadow-2xl">
                 {/* Placeholder avatar - replace src with actual photo */}
                 <img
-                  src="https://i.ibb.co/n8bjgySf/image.png"
+                  src="https://i.ibb.co/35YydDQs/image.png"
                   alt="Cristhian Altamirano"
                   className="w-full h-full object-cover"
                 />
